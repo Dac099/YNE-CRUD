@@ -1,0 +1,56 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+    display: grid;
+    height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav ul
+{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+    margin: 20px auto;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+a:hover
+{
+    box-shadow: 1px 1px 1px lightgray;
+}
+
+main
+{
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+footer
+{
+    padding: 20px;
+    text-align: center;
+}
+
+footer p
+{
+    margin-top: 20px;
+}

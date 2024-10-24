@@ -1,0 +1,15 @@
+.product-form section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form section input
+{
+    max-width: 400px;
+}
+
+.product-form--title
+{
+    margin-bottom: 20px;
+}
