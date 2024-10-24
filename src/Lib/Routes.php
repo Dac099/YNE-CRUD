@@ -2,6 +2,9 @@
 namespace Dac099\YneCrud\Lib;
 use Bramus\Router\Router;
 use Dac099\YneCrud\Controllers\ProductController;
+use Dac099\YneCrud\Controllers\CategoryController;
+use Dac099\YneCrud\Controllers\WarehouseController;
+use Dac099\YneCrud\Controllers\UserController;
 
 class Routes
 {
@@ -54,7 +57,13 @@ class Routes
     private function categoryRoutes():void
     {
         $this->router->get('/categories', function(){
-            echo 'Aquí se muestran todas las categorías';
+            $controller = new CategoryController();
+            $controller->listAllCategories();
+        });
+
+        $this->router->get("/categories-create", function(){
+            $controller = new CategoryController();
+            $controller->formCategory();
         });
 
         $this->router->get('/categories/{id}', function($id){
@@ -78,7 +87,13 @@ class Routes
     private function warehouseRoutes():void
     {
         $this->router->get('/warehouse', function(){
-            echo 'Mostrando los almacenes';
+            $controller = new WarehouseController();
+            $controller->listAllWarehouse();
+        });
+
+        $this->router->get('/warehouse-create', function(){
+            $controller = new WarehouseController();
+            $controller->formWarehouse();
         });
 
         $this->router->get('/warehouse/{id}', function($id){
@@ -101,8 +116,10 @@ class Routes
 
     private function userRoutes():void
     {
+        //Routes only for admin users
         $this->router->get('/users', function(){
-            echo 'Mostrando los usuarios (amin)';
+            $controller = new UserController();
+            $controller->listAllUsers();
         });
 
         $this->router->put('/users/{id}', function($id){

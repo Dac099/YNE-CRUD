@@ -113,14 +113,24 @@ class ProductModel
 
         if(!empty($productId) && !empty($data))
         {
-            $query = "UPDATE Product ";
+            $name = $data['name'];
+            $description = $data['description'];
+            $price = $data['price'];
+            $categoryId = $data['category_id'];
+            $warehouseId = $data['warehouse_id'];
+            $updatedBy = $data['updated_by'];
 
-            foreach ($data as  $column => $value)
-            {
-                $query .= " SET $column = '$value' ";
-            }
-
-            $query .= " WHERE ProductId = '$productId' ";
+            $query = "
+                UPDATE Product
+                SET
+                    Name = '$name', 
+                    Description = '$description',
+                    Price = $price,
+                    CategoryId = $categoryId,
+                    WarehouseId = $warehouseId,
+                    UpdatedBy = '$updatedBy'
+                WHERE ProductId = '$productId'
+            ";
 
             try
             {

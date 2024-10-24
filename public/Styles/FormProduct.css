@@ -1,15 +1,82 @@
-.product-form section
+form
+{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form--title
+{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form p
+{
+    text-align: center;
+    color: #a0a0a0;
+}
+
+form section
 {
     display: flex;
     flex-direction: column;
 }
 
-.product-form section input
+form input
 {
-    max-width: 400px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid lightgray;
+    padding-left: 15px;
+    font-size: 14px;
 }
 
-.product-form--title
+form label
 {
-    margin-bottom: 20px;
+    margin: 20px 0 5px 0;
+    font-size: 18px;
+}
+
+form textarea
+{
+    resize: none;
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    font-size: 14px;
+    padding: 10px;
+}
+
+form select
+{
+    width: 70%;
+    margin: 0 auto;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+
+form input[type="number"]
+{
+    position: relative;
+}
+
+form input[type="number"]::after
+{
+    content: '$';
+    display: block;
+    position: absolute;
+
+}
+
+form button
+{
+    margin: 20px auto;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
 }

@@ -69,7 +69,6 @@ class Database
             $response = $this->conn->query($query);
             $data = $response->fetch_assoc();
         }catch(Exception $e) {
-
             error_log("Database query error: " . $e->getMessage());
         }
         return $data;

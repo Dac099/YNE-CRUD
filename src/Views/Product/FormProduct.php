@@ -1,5 +1,13 @@
-<h2 class="product-form--title">Agrega un nuevo producto</h2>
+<h2 class="form--title">
+    <?php
+        $title = "";
+        !is_null($product) ? $title = "Editando $product->Name" : $title = "Agrega un nuevo producto";
+        echo $title;
+    ?>
+</h2>
+
 <form action="/yne-crud/products" method="POST" class="product-form">
+    <p><i>Todos los campos son requeridos</i></p>
 
     <section>
         <label for="name">Nombre</label>

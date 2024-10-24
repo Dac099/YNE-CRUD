@@ -3,4 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+
+.list-body
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+.list-body--text
+{
+    text-align: center;
+    font-size: 18px;
 }
